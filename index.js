@@ -12,6 +12,7 @@
 // init();
 
 var inquirer = require("inquirer");
+var fs = require("fs");
 
 inquirer
   .prompt([
@@ -42,16 +43,58 @@ inquirer
     },
     {
       type: "input",
-      message: "Enter all licenses to add",
+      message: "Enter all licenses to add:",
       name: "licenseRes",
       when: (answers) => answers.licenseQuery === true,
     },
     {
       type: "confirm",
       message: "Are there any contributors to credit?",
-      name: "contributors",
+      name: "contributorQuery",
+    },
+    {
+      type: "input",
+      message: "Enter all contributors:",
+      name: "contributorRes",
+      when: (answers) => answers.contributorQuery === true,
     },
   ])
   .then(function (res) {
-    console.log(res.title, res.desc);
+    console.log(
+      res.title,
+      res.desc,
+      res.install,
+      res.usage,
+      res.licenseQuery,
+      res.licenseRes,
+      res.contributorQuery,
+      res.contributorRes
+    );
+    fs.writeFile(
+      "readme.md",
+      `# ${res.title}
+## Description
+${res.desc}
+***
+## Contents
+- How to install
+- How to use
+- Licenses (if applicable)
+- Contributors (if applicable) 
+***
+## How to install 
+${res.install}
+***
+## Licenses
+${res.licenseRes}
+***
+## Contributors
+${res.contributorRes}`,
+      (error) => {
+        if (error) {
+          console.log(error);
+        }
+        console.log("File Created");
+      }
+    );
   });
