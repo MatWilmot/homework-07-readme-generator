@@ -13,6 +13,7 @@
 
 var inquirer = require("inquirer");
 var fs = require("fs");
+var axios = require("axios");
 
 inquirer
   .prompt([
@@ -38,12 +39,12 @@ inquirer
     },
     {
       type: "confirm",
-      message: "Is there any licensing that needs to be listed?",
+      message: "Are you using a license?",
       name: "licenseQuery",
     },
     {
       type: "input",
-      message: "Enter all licenses to add:",
+      message: "Which license do you want to use?:",
       name: "licenseRes",
       when: (answers) => answers.licenseQuery === true,
     },
@@ -84,6 +85,9 @@ ${res.desc}
 ***
 ## How to install 
 ${res.install}
+***
+## Intended Usage
+${res.usage}
 ***
 ## Licenses
 ${res.licenseRes}
