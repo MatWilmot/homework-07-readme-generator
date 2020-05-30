@@ -1,21 +1,41 @@
-# Readme Generator
+![user's avatar](https://avatars0.githubusercontent.com/u/60797785?v=4)
+email: None
+
+# Tieele
+
 ## Description
-A simple readme generator, for consistent results!
-***
+
+desc
+
+---
+
 ## Contents
+
 - How to install
 - How to use
 - Licenses (if applicable)
-- Contributors (if applicable) 
-***
-## How to install 
-use 'npm install' once you have the package.json file
-***
+- Contributors (if applicable)
+
+---
+
+## How to install
+
+install me
+
+---
+
 ## Intended Usage
-To quickly and easily generate a readme file
-***
+
+use me
+
+---
+
 ## Licenses
+
 undefined
-***
+
+---
+
 ## Contributors
+
 undefined
