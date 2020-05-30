@@ -1,11 +1,12 @@
-![user's avatar](https://avatars0.githubusercontent.com/u/60797785?v=4)
-email: None
+![license type](https://img.shields.io/badge/License-None-yellow)<br>
+![user's avatar](https://avatars0.githubusercontent.com/u/60797785?v=4)<br>
+email: Not Publicly Available
 
-# Tieele
+# Readme Generator
 
 ## Description
 
-desc
+This is an easy to use README generator, created from the command line using Node.
 
 ---
 
@@ -20,19 +21,19 @@ desc
 
 ## How to install
 
-install me
+`npm install`
 
 ---
 
 ## Intended Usage
 
-use me
+To quickly create a consistent readme file. Run using `node index.js` and follow the prompts. A README file will be generated.
 
 ---
 
 ## Licenses
 
-undefined
+Blank for now
 
 ---
 

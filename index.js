@@ -13,8 +13,9 @@ inquirer
     axios.get(searchUrl).then(function (res) {
       var avatarUrl = res.data.avatar_url;
       var userEmail = res.data.email;
+
       if (userEmail === null) {
-        userEmail = "Not Available";
+        userEmail = "Not Publicly Available";
       }
       inquirer
         .prompt([
@@ -49,6 +50,7 @@ inquirer
               "GNU GPLv3",
               "Mozilla Public License 2.0",
               "Boost Software License 1.0",
+              "None",
             ],
           },
           {
@@ -61,17 +63,6 @@ inquirer
             message: "Enter all contributors:",
             name: "contributorRes",
             when: (answers) => answers.contributorQuery === true,
-          },
-          {
-            type: "confirm",
-            message: "Is this for an existing project?",
-            name: "existingProject",
-          },
-          {
-            type: "input",
-            message: "Copy/Paste repo *name*",
-            name: "repoName",
-            when: (answers) => answers.existingProject === true,
           },
         ])
         .then(function (res) {
@@ -86,14 +77,14 @@ inquirer
             res.desc,
             res.install,
             res.usage,
-            res.licenseQuery,
-            res.licenseRes,
+            res.license,
             res.contributorQuery,
             res.contributorRes
           );
           fs.writeFile(
             "readme.md",
-            `![user's avatar](${avatarUrl})
+            `![license type](https://img.shields.io/badge/License-${res.license}-yellow)<br>
+  ![user's avatar](${avatarUrl})<br>
   email: ${userEmail}
   # ${res.title}
   ## Description
@@ -112,7 +103,7 @@ inquirer
   ${res.usage}
   ***
   ## Licenses
-  ${res.licenseRes}
+  Blank for now
   ***
   ## Contributors
   ${res.contributorRes}`,
