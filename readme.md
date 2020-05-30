@@ -28,12 +28,8 @@ This is an easy to use README generator, created from the command line using Nod
 ## Intended Usage
 
 To quickly create a consistent readme file. Run using `node index.js` and follow the prompts. A README file will be generated.
-
----
-
-## Licenses
-
-Blank for now
+Click the following link to see a quick preview of how to use this app:
+https://drive.google.com/file/d/1cWF4MvQ6zgreQrOe13xtkVdq2w-8E-9d/view
 
 ---
 

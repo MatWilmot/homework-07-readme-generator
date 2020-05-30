@@ -102,9 +102,6 @@ inquirer
   ## Intended Usage
   ${res.usage}
   ***
-  ## Licenses
-  Blank for now
-  ***
   ## Contributors
   ${res.contributorRes}`,
             (error) => {
