@@ -66,9 +66,6 @@ inquirer
           },
         ])
         .then(function (res) {
-          if (res.licenseRes === "undefined") {
-            res.licenseRes = "None";
-          }
           if (res.contributorRes === "undefined") {
             res.contributorRes = "None";
           }
@@ -93,7 +90,6 @@ inquirer
   ## Contents
   - How to install
   - How to use
-  - Licenses (if applicable)
   - Contributors (if applicable)
   ***
   ## How to install

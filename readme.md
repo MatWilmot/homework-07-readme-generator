@@ -14,7 +14,6 @@ This is an easy to use README generator, created from the command line using Nod
 
 - How to install
 - How to use
-- Licenses (if applicable)
 - Contributors (if applicable)
 
 ---
@@ -35,4 +34,4 @@ https://drive.google.com/file/d/1cWF4MvQ6zgreQrOe13xtkVdq2w-8E-9d/view
 
 ## Contributors
 
-undefined
+None
